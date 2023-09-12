@@ -43,7 +43,7 @@ export const generateJwtToken = async (payload: jose.JWTPayload) => {
     .setExpirationTime("2h")
     .sign(secret);
 
-  let user = {
+  let user:any = {
     ...payload,
     token: jwt,
     exp: '2h'

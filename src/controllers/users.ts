@@ -4,7 +4,7 @@ import { deleteUserById, getUsers, getUserById } from '../db/users';
 
 export const getAllUsers = async (req:any, res: express.Response) => {
   try {
-    console.log(req?.identity)
+    // console.log(req?.identity)
     const users = await getUsers();
 
     return res.status(200).json(users);
