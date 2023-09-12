@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "fda7a3d0-7737-4e9d-8e7f-c00115b0026a",
+		"name": "API-EXAMPLE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    \"email\": \"jayzoon19@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"username\":\"jayzoon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Administrator\",\r\n    \"password\": \"xs5EXgAfJFNwd2Ga\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/staging-svpdc/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"staging-svpdc",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiJ9.eyJkYXRhIjp7Il9pZCI6IjY0ZmRjNWM3Y2Q1MDU4YzllMGI2MGU0OCIsImVtYWlsIjoiamF5em9vbjE5QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiamF5em9vbiJ9LCJpYXQiOjE2OTQzODk4NDIsImlzcyI6InVybjpleGFtcGxlOmlzc3VlciIsImF1ZCI6InVybjpleGFtcGxlOmF1ZGllbmNlIiwiZXhwIjoxNjk0Mzk3MDQyfQ.PNj3qOINMvGg_eSA52XEXWGJa_RM2z2W3EzWnIPqQqxoBAlQPErVyWLh8Mc19OtTuAkIa-wyL-ZgKv93Zy8X8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
